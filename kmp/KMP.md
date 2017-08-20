@@ -13,7 +13,7 @@
 >
 > - 当前匹配点不匹配，如果仅将模式串向后移动一位重第一位比较，模式串第二位和第一位不同，则这次匹配一定不会成功，则需要找到最长的匹配前缀和后缀，如下图：
 >
->   <img src="https://github.com/shuyuFranky/coding/blob/master/img/img1.png" alt="此处应该有图片"></img>
+>   <img src="https://github.com/shuyuFranky/coding/blob/master/img/img1.png" alt="此处应该有图片" width="300px" align="middle"></img>
 >
 > - KMP算法伪码
 >
@@ -49,7 +49,7 @@
 >   >   >
 >   >   > > p[5] = 3, p[0,2] = p[2,4]
 >   >   > >
->   >   > > <img src="https://github.com/shuyuFranky/coding/blob/master/img/img2.png" alt="此处应该有图片"></img>
+>   <img src="https://github.com/shuyuFranky/coding/blob/master/img/img2.png" alt="此处应该有图片" width="200px" align="middle"></img>
 >   >
 >   > - 计算next数组：
 >   >
