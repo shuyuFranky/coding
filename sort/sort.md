@@ -46,6 +46,117 @@
 
 
 
+#### 二、堆排序
+
+> 自底向上建堆，自顶向下更新堆
+>
+> **注意：**
+>
+> - 从第一个非叶子节点开始自底向上调节堆，每一个子树自顶向下调节
+> - 实现时注意边界条件
+>
+> ```c++
+> void sift(int k, int n) {
+>     int i = k, j = 2*k;                 // i 为当前根节点， j 为左子节点
+>     while (j<=n) {
+>         if (j<n && arr[j] < arr[j+1])   // 将j指向较大的子节点，注意检查 j+1 是否越界
+>             j++;
+>         if (arr[i] > arr[j])            // 已经是最大值堆了，不再调整，
+>             break;                      // 自底向上的过程保证了这里break正确
+>         else {
+>             swap(arr[i], arr[j]);       // 交换
+>             i = j;                      // 自顶向下调整
+>             j = 2*i;
+>         }
+>     }
+> }
+>
+> /*
+> *   堆排序函数
+> */
+> void heapsort() {                       
+>     for (int i = N/2; i>=1; i--)        // 从最后一个非叶子节点开始
+>         sift(i, N);                     // 自顶向下调整子树为最大值堆
+>                                         // for 循环自底向上调节整个树为最大值堆
+>     for (int i = 1; i<N; i++) {         // N-1 次取出最大值
+>         swap(arr[1], arr[N-i+1]);       // 每次交换后 arr[N-i+1, N]为升序
+>         sift(1, N-i);                   // 重新调整整棵树
+>     }
+> }
+> ```
+>
+> **解题报告：**
+>
+> - POJ2833
+>
+>   > **题目大意：** n个得分去掉前n1个最高分和n2个最低得分后求均值。
+>   >
+>   > **分析：** 题目很简单，数据很变态，直接排序会MLE 
+>   >
+>   > **解题思路：** 
+>   >
+>   > > - 前 (n1 + n2) 个数qsort一遍，然后分成，n1个最大值组成的最小值堆和n2个最小值组成的最大值堆
+>   > > - 即分别维护一个最小值堆和一个最大值堆
+>   > > - 每次输入，判断是否大于最大值堆中的最小值，是则替换该最小值；否则判断是否小于最小值堆中的最大值，是则替换该最大值；否则该数据累加，用于统计最后均值
+>   >
+>   > **注意：** 
+>   >
+>   > > - 累加器必须用 **long long** ！！！
+>   > > - 中间用int处理
+>   > > - 最后返回值再转化为double输出
+>   >
+>   > **coding：**
+>   >
+>   > > qsort之后，按顺序填入，已经是最大值堆和最小值堆了，之后只需进行维护，代码同上。
+>   > >
+>   > > 以下为主函数代码，完整代码见POJ2833_heap.cpp
+>   >
+>   > ```c++
+>   > int main() {
+>   >     long long ans = 0;                          // 注意：累加器一定要用 long long
+>   >     double res = 0;
+>   >     while (1) {
+>   >         ans = 0;
+>   >         scanf("%d %d %lld", &g, &l, &n);
+>   >         if (g < 1) break;
+>   >         int tmp = 0;                            // 中间过程用int处理
+>   >         for (int i = 0; i<g+l; i++) {
+>   >             scanf("%d", &arr[i]);
+>   >         }
+>   >         qsort(0, g+l-1);
+>   >         for (int i = 0; i<=g; i++){
+>   >             g_minheap[i+1] = arr[g-i-1];
+>   >         }
+>   >         for (int i = g+1; i<=g+l; i++){
+>   >             l_maxheap[i-g] = arr[i-1];
+>   >         }
+>   >         int c_g_min = g_minheap[1];
+>   >         int c_l_max = l_maxheap[1];
+>   >         for (int i = g+l; i<n; i++) {
+>   >             scanf("%d", &tmp);
+>   >             if (tmp > c_g_min) {
+>   >             		ans += c_g_min;
+>   >                 g_minheap[1] = tmp;
+>   >                 sift_min(1, g);
+>   >                 c_g_min = g_minheap[1];
+>   >             } else if (tmp < c_l_max){
+>   >             		ans += c_l_max;
+>   >                 l_maxheap[1] = tmp;
+>   >                 sift_max(1, l);
+>   >                 c_l_max = l_maxheap[1];
+>   >             } else {
+>   >                 ans += tmp;
+>   >             }
+>   >         }
+>   >         res = double(ans) / (n - g - l);        // 最后结果转回 double
+>   >         printf("%.6lf\n", res);
+>   >     }
+>   >     return 0;
+>   > }
+>   > ```
+>   >
+>   > ​
+
 
 
 — 待更新
