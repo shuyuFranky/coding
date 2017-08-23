@@ -16,12 +16,12 @@ void mergearr(int l, int r) {
     int j =  m + 1;
     int k = 0;
     while (i<=m && j<=r) {
-        if(arr[i] <= arr[j]) {                      // 等于不算逆序数
+        if(arr[i] <= arr[j]) {         // 等于不算逆序数
             tmp[k++] = arr[i++];
-        } else {                                    // 当arr[i] > arr[j]时
-            tmp[k++] = arr[j++];                    // 将arr[j]放到arr[i]之前
-            ans += m-i+1;                           // 在前半部分中，比arr[i]大的数均比arr[j]大
-        }                                           // 即，计算逆序数时应加上这部分
+        } else {                       // 当arr[i] > arr[j]时
+            tmp[k++] = arr[j++];       // 将arr[j]放到arr[i]之前
+            ans += m-i+1;              // 在前半部分中，比arr[i]大的数均比arr[j]大
+        }                              // 即，计算逆序数时应加上这部分
     }
     while (i<=m) {
         tmp[k++] = arr[i++];
