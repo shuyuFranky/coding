@@ -165,7 +165,7 @@
 >
 > **算法过程，如图**
 >
-> <img src="" alt="此处应该有图片"> </img>
+> <img src="https://github.com/shuyuFranky/coding/blob/master/img/img3.png" alt="此处应该有图片" width="200px"> </img>
 >
 > **解题报告：**
 >
