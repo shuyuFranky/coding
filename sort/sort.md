@@ -217,11 +217,11 @@
 >
 > > 设有数组 array = [29, 25, 3, 49, 9, 37, 21, 43]，那么数组中最大数为 49，先设置 5 个桶，那么每个桶可存放数的范围为：09、1019、2029、3039、40~49，然后分别将这些数放人自己所属的桶，如下图：
 >
-> > [![img](http://bubkoo.qiniudn.com/bucket-sort-1.png)](http://bubkoo.qiniudn.com/bucket-sort-1.png)
+> > [![img](https://github.com/shuyuFranky/coding/blob/master/img/img4.png)](https://github.com/shuyuFranky/coding/blob/master/img/img4.png)
 >
 > > 然后，分别对每个桶里面的数进行排序，或者在将数放入桶的同时用插入排序进行排序。最后，将各个桶中的数据有序的合并起来，如下图：
 >
-> > [![img](http://bubkoo.qiniudn.com/bucket-sort-2.png)](http://bubkoo.qiniudn.com/bucket-sort-2.png)
+> > [![img](https://github.com/shuyuFranky/coding/blob/master/img/img5.png)](https://github.com/shuyuFranky/coding/blob/master/img/img5.png)
 >
 > **最快的排序算法：**
 >
