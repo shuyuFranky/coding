@@ -14,4 +14,7 @@
 > - Mergesort  
 > Wed Aug 23 22:13:06 CST 2017
 
+> - Bucketsort  
+> Fri Aug 25 10:04:15 CST 2017
+
 <img src="https://github.com/shuyuFranky/coding/blob/master/img/yellowman4.jpg" alt="此处应有图片"> </img>
