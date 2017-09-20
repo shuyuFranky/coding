@@ -1,114 +1,57 @@
-/**
-*   二叉树的操作
-*/
-#include <iostream>
+#include <cstdio>
+#include <cstring>
 
 using namespace std;
 
-struct node {
-    node * left;
-    node * right;
-    int var;
-    node () {}
-    node (int v):var(v) {}
-}
+const int maxn = 110;
 
-void destroyTree(node * root) {
-    if (root == NULL) return ;
-    destroyTree(root->left);
-    destroyTree(root->right);
-    delete root;
-    return;
-}
+struct Node {
+	int father;
+	int left, right;
+};
 
-node * getNode(node * root, int var) {
-    if (root == NULL) return NULL;
-    if (root->var == var) return root;
-    node * tmp;
-    tmp = getNode(root->left,var);
-    if (tmp != NULL) return tmp;
-    tmp = getNode(root->right,var);
-    return tmp;
-}
-
-void printNode(node * root, int var) {
-    node * cn = getNode(root, var);
-    while(cn->left != NULL)
-        cn = cn->left;
-    cout<<cn->var<<endl;
-    return ;
-}
-
-node * getParent(node * root, int var) {
-    if (root->left != NULL && root->left->var == var) return root;
-    if (root->right != NULL && root->right->var == var) return root; 
-    node * tmp = getParent(root->left);
-    if (tmp != NULL) return tmp;
-    tmp = getParent(root->right);
-    return tmp;
-}
-
-void swapNode(node * root, int x, int y) {
-    node * X = getParent(root, x);
-    node * Y = getParent(root, y);
-    node * tmp;
-    if (X->left->var == x) {
-        if (Y->left->var == y) {
-            tmp = X->left;
-            X->left = Y->left;
-            Y->left = tmp;
-        } else {
-            tmp = X->left;
-            X->left = Y->right;
-            Y->right = tmp; 
-        }   
-    } else {
-        if (Y->left->var == y) {
-            tmp = X->right;
-            X->right = Y->left;
-            Y->left = tmp;
-        } else {
-            tmp = X->right;
-            X->right = Y->right;
-            Y->right = tmp; 
-        } 
-    }
-}
+Node node[maxn];
+int N, M;
 
 int main() {
-    int T;
-    cin>>T;
-    int n, m;
-    int op,arg1,arg2;
-    int pa, left, right;
-    while(T--) {
-        cin>>n>>m;
-        node * root;
-        cin>>pa>>left>>right;
-        root = new node(pa);
-        root->left = new node(left);
-        root->right = new node(right);
-        for (int i = 1; i<n; i++) {
-            cin>>pa>>left>>right;
-            node * parent = getNode(root, pa);
-            node * ln = new node(left);
-            node * rn = new node(right);
-            parent->left = ln;
-            parent->right = rn; 
-        }
-        for (int i = 0; i<m; i++) {
-            cin>>op;
-            if (op == 1) {
-                cin>>arg1>>arg2;
-                swapNode(root,arg1,arg2);
-            } else if (op == 2) {
-                cin>>arg1;
-                printNode(root,arg1);
-            } else {
-                return 0;
-            }
-        }
-        destroyTree(root);
-    }
-    
+	int Tests;
+	scanf("%d\n", &Tests);
+	while (Tests --) {
+		scanf("%d %d\n", &N, &M);
+		memset(node, 0, sizeof(node));
+		for (int i = 0; i < N; i++) {
+			int x, y, z;
+			scanf("%d %d %d\n", &x, &y, &z);
+			node[x].left = y;
+			node[x].right = z;
+			if (y != -1) node[y].father = x;
+			if (z != -1) node[z].father = x;
+		}
+		for (int i = 0; i < M; i++) {
+			int op, x, y;
+			scanf("%d", &op);
+			if (op == 1) {
+				scanf("%d %d\n", &x, &y);
+				int fa1 = node[x].father;
+				int fa2 = node[y].father;
+				bool flag1_left = false;
+				bool flag2_left = false;
+				if (node[fa1].left == x) flag1_left = true;
+				if (node[fa2].left == y) flag2_left = true;
+				if (flag1_left) node[fa1].left = y;
+					else node[fa1].right = y;
+				if (flag2_left) node[fa2].left = x;
+					else node[fa2].right = x;
+				node[x].father = fa2;
+				node[y].father = fa1;
+			}
+			if (op == 2) {
+				scanf("%d\n", &x);
+				int ret = x;
+				while (node[ret].left != -1) ret = node[ret].left;
+				printf("%d\n", ret);
+			}
+		}
+	}
+	return 0;
 }
