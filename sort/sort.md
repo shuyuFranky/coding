@@ -39,8 +39,8 @@
 >
 > **解题报告：**
 >
-> - POJ2388
-> - POJ3664
+> - [POJ2388](https://github.com/shuyuFranky/coding/blob/master/sort/POJ2388_qsort.cpp)
+> - [POJ3664](https://github.com/shuyuFranky/coding/blob/master/sort/POJ3664_qsort.cpp)
 >
 > > 以上两题均简单运用快排，无他。
 
@@ -87,7 +87,7 @@
 >
 > **解题报告：**
 >
-> - POJ2833
+> - [POJ2833](https://github.com/shuyuFranky/coding/blob/master/sort/POJ2833_heap.cpp)
 >
 >   > **题目大意：** n个得分去掉前n1个最高分和n2个最低得分后求均值。
 >   >
@@ -169,7 +169,7 @@
 >
 > **解题报告：**
 >
-> POJ1804、POJ2299
+> [POJ1804](https://github.com/shuyuFranky/coding/blob/master/sort/POJ1804_mergesort.cpp)、[POJ2299](https://github.com/shuyuFranky/coding/blob/master/sort/POJ2299_mergesort.cpp)
 >
 > > 两道题均为求逆序对，只需对数组进行归并排序，在合并时计算逆序怼数。
 > >
@@ -237,7 +237,7 @@
 >
 > **解题报告：**
 >
-> - POJ1002
+> - [POJ1002](https://github.com/shuyuFranky/coding/blob/master/sort/POJ1002.cpp)
 >
 > > **题目大意：** 电话号码匹配，输出有重复的号码，及号码重复出现的次数。没有重复则输出『No duplicates.』
 > >
