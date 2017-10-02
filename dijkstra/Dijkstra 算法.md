@@ -11,7 +11,7 @@
 >   - D. 重复步骤B和C直到所有顶点都包含在S中。
 > - 算法执行动画如下：
 >
-> > <img alt="dijkstra 演示gif"> </img>
+> > <img src="https://github.com/shuyuFranky/coding/blob/master/img/dijkstra.gif" alt="dijkstra 演示gif"> </img>
 >
 > - 算法核心过程如下：
 >
@@ -77,7 +77,7 @@
 > > > >
 > > > > > 如图所示
 > > > > >
-> > > > > <img src="2253-proof"> </img>
+> > > > > <img src="https://github.com/shuyuFranky/coding/blob/master/img/2253-pro.png"> </img>
 > > > > >
 > > > > > - 因为v为距离s最近的点，即不会存在w点；
 > > > > > - 假设有s->u->…->v的路径，不防设其中最大间隔为len = e\[v\]\[u\], 则len一定大于dis\[v\], 否则最大间隔将为dis[u]而不是e\[v\]\[u\]
