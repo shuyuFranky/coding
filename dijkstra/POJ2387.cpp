@@ -53,10 +53,10 @@ int main() {
             }
         }
         book[u] = 1;
-        for (int i = 1; i<=N; i++) {
-            if (e[u][i] < INF) {            // 对以点u为起点的边，做松弛操作
-                if (dis[u] + e[u][i] < dis[i]) {
-                    dis[i] = dis[u] + e[u][i];
+        for (int v = 1; v<=N; v++) {
+            if (e[u][v] < INF) {            // 对以点u为起点的边，做松弛操作
+                if (dis[u] + e[u][v] < dis[v]) {
+                    dis[v] = dis[u] + e[u][v];
                 }
             }
         }
