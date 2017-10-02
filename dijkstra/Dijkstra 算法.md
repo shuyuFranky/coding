@@ -42,7 +42,7 @@
 >
 > > - POJ2387
 > >
-> > > Dijkstra 模板题，直接套用模板，代码见POJ2387.cpp，注意边重复等细节问题。 
+> > > Dijkstra 模板题，直接套用模板，代码见[POJ2387.cpp](https://github.com/shuyuFranky/coding/blob/master/dijkstra/POJ2387.cpp)，注意边重复等细节问题。 
 > >
 > > - POJ2253
 > >
@@ -82,4 +82,4 @@
 > > > > > - 因为v为距离s最近的点，即不会存在w点；
 > > > > > - 假设有s->u->…->v的路径，不防设其中最大间隔为len = e\[v\]\[u\], 则len一定大于dis\[v\], 否则最大间隔将为dis[u]而不是e\[v\]\[u\]
 > > >
-> > > AC 代码见POJ2253.cpp
+> > > AC 代码见[POJ2253.cpp](https://github.com/shuyuFranky/coding/blob/master/dijkstra/POJ2253.cpp)
