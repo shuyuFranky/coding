@@ -17,7 +17,7 @@
 > - Bucketsort  
 > Fri Aug 25 10:04:15 CST 2017
 
-#### [Dijkstra]()
+#### [Dijkstra](https://github.com/shuyuFranky/coding/blob/master/dijkstra/Dijkstra%20%E7%AE%97%E6%B3%95.md)
 > Mon Oct  2 16:08:03 CST 2017
 
 <img src="https://github.com/shuyuFranky/coding/blob/master/img/yellowman4.jpg" alt="此处应有图片"> </img>
