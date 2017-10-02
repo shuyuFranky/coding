@@ -77,7 +77,7 @@
 > > > >
 > > > > > 如图所示
 > > > > >
-> > > > > <img src="https://github.com/shuyuFranky/coding/blob/master/img/2253-pro.png" style="width=500px;"> </img>
+> > > > > <img src="https://github.com/shuyuFranky/coding/blob/master/img/2253-pro.png" width="400px;"> </img>
 > > > > >
 > > > > > - 因为v为距离s最近的点，即不会存在w点；
 > > > > > - 假设有s->u->…->v的路径，不防设其中最大间隔为len = e\[v\]\[u\], 则len一定大于dis\[v\], 否则最大间隔将为dis[u]而不是e\[v\]\[u\]
