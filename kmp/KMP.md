@@ -53,7 +53,7 @@
 >   >
 >   > - 计算next数组：
 >   >
->   >   > **递归思想(转化为递推求解)：**假设已知next[0,q]，求next[q+1]
+>   >   > **递归思想(转化为递推求解)：** 假设已知next[0,q]，求next[q+1]
 >   >   >
 >   >   > ```c++
 >   >   > next[q] = k;
@@ -125,13 +125,13 @@
 
 #### 解题报告
 
-> - hiho coder 1015	&	POJ3461
+> - [hiho coder 1015](https://github.com/shuyuFranky/coding/blob/master/kmp/hiho1015.cpp)	&	[POJ3461](https://github.com/shuyuFranky/coding/blob/master/kmp/poj3461.cpp)
 >
 >   > **题目大意：** 找出原串中包含的模式串个数 ，包含可以重叠
 >   >
 >   > **注意：** 需要计算plen+1位next数组，即某次匹配完成后需要回溯到next[plen]开始下一次查找。
 >
-> - POJ2752
+> - [POJ2752](https://github.com/shuyuFranky/coding/blob/master/kmp/poj2752.cpp)
 >
 >   > **题目大意：** 求字符串S中所有匹配的前缀后缀
 >   >
@@ -156,7 +156,7 @@
 >   >   // 反序输出即可
 >   >   ```
 >
-> - POJ2406
+> - [POJ2406](https://github.com/shuyuFranky/coding/blob/master/kmp/poj2406.cpp)
 >
 >   > **题目大意：** S=a^n=a\*a^(n-1), str=str1\*str2=concat(str1,str2); 求n。
 >   >
@@ -166,7 +166,7 @@
 >   > - - **则a.length = slen - next[slen];**
 >   > - - 且slen % a.length == 0
 >
-> - POJ1961
+> - [POJ1961](https://github.com/shuyuFranky/coding/blob/master/kmp/poj1961.cpp)
 >
 >   > **题目大意：** 求S字符串所有子串存在的循环周期，subS=a^n，则存在循环且周期为n。(要求输出n > 1的解)
 >   >
