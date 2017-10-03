@@ -19,8 +19,8 @@
 >
 > **解题报告：** 
 >
-> > - POJ1125
-> > - POJ1603
-> > - POJ3268-TLE
+> > - [POJ1125](https://github.com/shuyuFranky/coding/blob/master/floyd/POJ1125.cpp)
+> > - [POJ1603](https://github.com/shuyuFranky/coding/blob/master/floyd/POJ1603.cpp)
+> > - [POJ3268-TLE](https://github.com/shuyuFranky/coding/blob/master/floyd/POJ3268-TLE.cpp)
 > >
-> > > 一上均是建图然后直接对floyd算法的应用，其中POJ 3268会超时，需要采用dijkstra，见dijkstra/POJ3268.cpp
+> > > 一上均是建图然后直接对floyd算法的应用，其中POJ 3268会超时，需要采用dijkstra，见[dijkstra/POJ3268.cpp](https://github.com/shuyuFranky/coding/blob/master/dijkstra/POJ3268.cpp)
