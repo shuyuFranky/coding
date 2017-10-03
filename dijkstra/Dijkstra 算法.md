@@ -90,7 +90,7 @@
 > > >
 > > > 大意：运输货物，求所有路径中，运输量最小段落的最大值（运输瓶颈，优化）
 > > >
-> > > 解题思路：类比POJ2253，AC代码见POJ1797.cpp
+> > > 解题思路：类比POJ2253，AC代码见[POJ1797.cpp](https://github.com/shuyuFranky/coding/blob/master/dijkstra/POJ1797.cpp)
 > >
 > > - POJ1847
 > >
@@ -98,7 +98,7 @@
 > > >
 > > > Dijkstra 的直接应用。
 > > >
-> > > AC 代码见POJ1847.cpp
+> > > AC 代码见[POJ1847.cpp](https://github.com/shuyuFranky/coding/blob/master/dijkstra/POJ1847.cpp)
 > >
 > > - POJ3268
 > >
@@ -108,8 +108,8 @@
 > > >
 > > > 解题思路：
 > > >
-> > > - 每头牛都要去X， 并从X回自己的出发点，直觉建模多源最短路，用了floyd(floyd/POJ3268-TLE.cpp)，果然TLE了。
-> > > - 改成party结束后所有牛从X点出发回家(单源最短路)，加上每头牛从自己家里过来的(n-1)个单源最短路，一起n次单源最短路，采用n次dijkstra，即又退化为floyd了，果然又TLE(POJ3268-TLE.cpp)了
+> > > - 每头牛都要去X，并从X回自己的出发点，直觉建模多源最短路，用了floyd([floyd\/POJ3268-TLE.cpp](https://github.com/shuyuFranky/coding/blob/master/floyd/POJ3268-TLE.cpp))，果然TLE了。
+> > > - 改成party结束后所有牛从X点出发回家(单源最短路)，加上每头牛从自己家里过来的(n-1)个单源最短路，一起n次单源最短路，采用n次dijkstra，即又退化为floyd了，果然又TLE([POJ3268\-TLE.cpp](https://github.com/shuyuFranky/coding/blob/master/dijkstra/POJ3268-TLE.cpp))了
 > > > - 然后反应过来，每头牛去X点可以反过来看，即每头牛从X点倒退回家，又是一个单源最短路，只需要对应将连接矩阵转置即可。最后只需要做两次dijkstra。
 > > >
-> > > AC 代码见POJ3268.cpp
+> > > AC 代码见[POJ3268.cpp](https://github.com/shuyuFranky/coding/blob/master/dijkstra/POJ3268.cpp)
