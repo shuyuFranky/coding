@@ -132,4 +132,4 @@
 > >
 > > GS 算法的直接应用
 > >
-> > AC 代码见POJ3487.cpp 
+> > AC 代码见[POJ3487.cpp](https://github.com/shuyuFranky/coding/blob/master/stable-matching/POJ3487.cpp) 
