@@ -27,7 +27,7 @@
 
 > 无向图 G=(V, E) 是二部图，当用两种不同颜色染色所有节点时，能够找到某种染色方法使得每条边连接的两个顶点为不同的颜色。
 >
-> <img src="https://github.com/shuyuFranky/coding/blob/master/img/bipartite-graph.png" alt="bipartite-graph" width="200px;"></img>
+> <img src="https://github.com/shuyuFranky/coding/blob/master/img/bipartite-graph.png" alt="bipartite-graph" width="150px;"></img>
 >
 > - Bipartiteness
 >
