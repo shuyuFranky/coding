@@ -47,7 +47,7 @@
 >   >
 >   > (2) 设 x-y 为某一层中相连的边，则可以找到他们最近的公共祖先节点 z，由 x → z → y → x 构成的环为奇数环， 长度为 1 + (j - i) + (j - i)，如下图。
 >   >
->   > <img src="" alt="pf-bipartite"></img>
+>   > <img src="https://github.com/shuyuFranky/coding/blob/master/img/pf-bipartite.png" alt="pf-bipartite" width="250px;"></img>
 >
 > - 推论 Corollary
 >   > G 是二部图，当且仅当 G 中没有奇数边环。
