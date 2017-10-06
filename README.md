@@ -23,5 +23,8 @@
 #### [Floyd](https://github.com/shuyuFranky/coding/blob/master/floyd/Floyd%20%E7%AE%97%E6%B3%95.md)
 > Wed Oct  4 00:27:21 CST 2017
 
+#### [Stable Matching (Gale-Shapley)](https://github.com/shuyuFranky/coding/blob/master/stable-matching/Stable%20Matching.md)
+> Fri Oct  6 11:48:46 CST 2017
+
 
 <img src="https://github.com/shuyuFranky/coding/blob/master/img/yellowman4.jpg" alt="此处应有图片"> </img>
