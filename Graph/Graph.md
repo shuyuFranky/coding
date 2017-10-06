@@ -27,7 +27,7 @@
 
 > 无向图 G=(V, E) 是二部图，当用两种不同颜色染色所有节点时，能够找到某种染色方法使得每条边连接的两个顶点为不同的颜色。
 >
-> <img src="https://github.com/shuyuFranky/coding/blob/master/img/bipartite-graph.png" alt="bipartite-graph" width="300px;"></img>
+> <img src="https://github.com/shuyuFranky/coding/blob/master/img/bipartite-graph.png" alt="bipartite-graph" width="200px;"></img>
 >
 > - Bipartiteness
 >
@@ -47,7 +47,7 @@
 >   >
 >   > (2) 设 x-y 为某一层中相连的边，则可以找到他们最近的公共祖先节点 z，由 x → z → y → x 构成的环为奇数环， 长度为 1 + (j - i) + (j - i)，如下图。
 >   >
->   > <img src="https://github.com/shuyuFranky/coding/blob/master/img/pf-bipartite.png" alt="pf-bipartite" width="250px;"></img>
+>   > <img src="https://github.com/shuyuFranky/coding/blob/master/img/pf-bipartite.png" alt="pf-bipartite" width="150px;"></img>
 >
 > - 推论 Corollary
 >   > G 是二部图，当且仅当 G 中没有奇数边环。
