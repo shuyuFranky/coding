@@ -4,17 +4,19 @@
 
 > 1. Adjacency matrix 邻接矩阵
 >
-> <img alt="adj-matrix"></img>
+> <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-matrix.png" alt="adj-matrix" width="400px;"></img>
 >
 > 1. Adjacency list 邻接表
 >
 > > - 链表实现
 > >
-> > <img alt="adj-list"></img>
+> > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-list.png" alt="adj-list" width="400px;"></img>
 > >
 > > - 数组实现
 > >
-> > <img alt="adj-array"></img>
+> > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-arr-graph.png" alt="adj-array" width="400px;"></img>
+> > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-array.png" alt="adj-array" width="400px;"></img>
+> > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-arr-use.png" alt="adj-array" width="400px;"></img>
 
 ##### 二、图遍历
 
@@ -25,7 +27,7 @@
 
 > 无向图 G=(V, E) 是二部图，当用两种不同颜色染色所有节点时，能够找到某种染色方法使得每条边连接的两个顶点为不同的颜色。
 >
-> <img alt="bipartite-graph"></img>
+> <img src="https://github.com/shuyuFranky/coding/blob/master/img/bipartite-graph.png" alt="bipartite-graph" width="400px;"></img>
 >
 > - Bipartiteness
 >
@@ -45,7 +47,7 @@
 >   >
 >   > (2) 设 x-y 为某一层中相连的边，则可以找到他们最近的公共祖先节点 z，由 x → z → y → x 构成的环为奇数环， 长度为 1 + (j - i) + (j - i)，如下图。
 >   >
->   > <img alt="pf-bipartite"></img>
+>   > <img src="" alt="pf-bipartite"></img>
 >
 > - 推论 Corollary
 >   > G 是二部图，当且仅当 G 中没有奇数边环。
