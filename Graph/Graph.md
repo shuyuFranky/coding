@@ -14,7 +14,7 @@
 > >
 > > - 数组实现
 > >
-> > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-arr-graph.png" alt="adj-array" width="150px;"></img>
+> > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-arr-graph.png" alt="adj-array" width="150px;" float="left"></img>
 > > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-array.png" alt="adj-array" width="200px;"></img>
 > > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-arr-use.png" alt="adj-array" width="200px;"></img>
 
