@@ -14,6 +14,18 @@
 > >
 > > - 数组实现
 > >
+> > ```
+> > //输入
+> > 4 5			// n , m 顶点数， 边
+> > 1 4 9
+> > 4 3 8
+> > 1 2 5
+> > 2 4 6
+> > 1 3 7
+> > ```
+> >
+> > 
+> >
 > > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-arr-graph.png" alt="adj-array" width="150px;"></img> <br>
 > > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-array.png" alt="adj-array" width="200px;"></img> <br>
 > > <img src="https://github.com/shuyuFranky/coding/blob/master/img/adj-arr-use.png" alt="adj-array" width="200px;"></img> <br>
