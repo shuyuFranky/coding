@@ -13,7 +13,7 @@
 
 > **Path compression**
 >
-> 在找到包含 $x$ 的树的根后，令路径上所有的节点父指针指向根节点，如下图![union-find](/Users/fatfat/workplace/hiho/img/union-find.png)
+> 在找到包含 $x$ 的树的根后，令路径上所有的节点父指针指向根节点，如下图![union-find](../img/union-find.png)
 
 > **实现**
 >
