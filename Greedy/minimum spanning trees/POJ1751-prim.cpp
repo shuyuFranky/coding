@@ -52,7 +52,7 @@ void Prim() {
         book[v] = 1;
         if (min != 0) cout << p[v] << " " << v << endl;
         for (int j = 1; j <= N; j++) {
-            if (!book[j] && dis[j] > e[v][j]) {
+            if (!book[j] && dis[j] > e[v][j]) { //注意这里和dijkstra的区别 
                 dis[j] = e[v][j];
                 p[j] = v;
             }
