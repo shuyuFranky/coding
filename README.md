@@ -32,5 +32,8 @@
 #### [Union-Find](https://github.com/shuyuFranky/coding/blob/master/Union-Find/Union-Find.md)
 > Thu Jan  4 20:08:31 CST 2018
 
+#### [Dynamic Programming](https://github.com/shuyuFranky/coding/blob/master/DP/Dynamic%20Programming.md)
+> Sun Jan  7 19:51:57 CST 2018
+
 
 <img src="https://github.com/shuyuFranky/coding/blob/master/img/yellowman4.jpg" alt="此处应有图片"> </img>
