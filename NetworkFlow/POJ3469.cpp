@@ -1,10 +1,6 @@
-/*
- * Dinic algo for max flow
- *
- * This implementation assumes that #nodes, #edges, and capacity on each edge <= INT_MAX,
- * which means INT_MAX is the best approximation of INF on edge capacity.
- * The total amount of max flow computed can be up to LLONG_MAX (not defined in this file),
- * but each 'dfs' call in 'dinic' can return <= INT_MAX flow value.
+/**
+ * Dual Core CPU
+ * Dinic
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -15,8 +11,9 @@
 #include <vector>
 #include <algorithm>
 
-#define N (100+2)
+#define N (20005)
 #define M (N*N+4*N)
+#define INT_MAX 1e9
 
 typedef long long LL;
 
@@ -121,71 +118,22 @@ LL dinic(int s, int t) {
   return max_flow;
 }
 
-int upstream(int s, int n) {
-  int cnt = 0;
-  vector<bool> visited(n);
-  queue<int> q;
-  visited[s] = true;
-  q.push(s);
-  while (!q.empty()) {
-    int u = q.front();
-    q.pop();
-    for (int i=head[u]; i>=0; i=e[i].next) {
-      int v = e[i].v;
-      if (e[i].cap > 0 && !visited[v]) {
-        visited[v] = true;
-        q.push(v);
-        cnt++;
-      }
-    }
-  }
-  return cnt; // excluding s
-}
-
 int main() {
-  int m, n, s, t;
-  int pig[M+1], pre[M+1];
-  bool con[N+1];
-  FILE *fin;
-
-  /*fin = fopen("pigs.dat", "r");
-  assert(fin);*/
-  fin = stdin;
-
-  fscanf(fin, "%d %d", &m, &n);
-  dinic_init();
-  s = 0, t = n+1;
-  for (int i=1; i<=m; i++) {
-    fscanf(fin, "%d", &pig[i]);
+  int n, m;
+  int a, b, w;
+  
+  scanf("%d %d", &n, &m);
+  for (int i = 1; i <= n; i++) {
+      scanf("%d %d", &a, &b);
+      add_edge(0, i, a, 0);
+      add_edge(i, n+1, b, 0);
   }
-  memset(pre, -1, sizeof(pre));
-  for (int i=1; i<=n; i++) {
-    int nkeys;
-    fscanf(fin, "%d", &nkeys);
-    memset(con, 0, sizeof(con));
-    int cap = 0;
-    for (int j=1; j<=nkeys; j++) {
-      int ph;
-      fscanf(fin, "%d", &ph);
-      int cust = pre[ph];
-      if (cust < 0) {
-        cap += pig[ph];
-      } else if (!con[cust]) {
-        add_edge(cust, i, INT_MAX, 0);
-      }
-      pre[ph] = i;
-    }
-    if (cap > 0) {
-      add_edge(s, i, cap, 0);
-    }
-    int npigs;
-    fscanf(fin, "%d", &npigs);
-    if (npigs > 0) {
-      add_edge(i, t, npigs, 0);
-    }
+  for (int i = 1; i <= m; i++) {
+      scanf("%d %d %d", &a, &b, &w);
+      add_edge(a, b, w, 0);
+      add_edge(b, a, w, 0);
   }
-  //print_graph(n+2);
-  int flow = dinic(s, t);
+  int flow = dinic(0, n+1);
   printf("%d\n", flow);
 
   return 0;

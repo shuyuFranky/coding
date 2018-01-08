@@ -1,7 +1,12 @@
 /**
- * Dual Core CPU
+ * Dining
  * Dinic
+ * 建图：
+ *      s->食物->牛->牛->饮料->t
+ *      每条边的容量都为1
+ *  注意：牛要拆点，保证不会有多组食物分到同一头牛
  */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
@@ -11,8 +16,8 @@
 #include <vector>
 #include <algorithm>
 
-#define N (20005)
-#define M (10000000)
+#define N (2005)
+#define M (100000)
 
 typedef long long LL;
 
@@ -117,22 +122,53 @@ LL dinic(int s, int t) {
   return max_flow;
 }
 
+int n, f, d;
+int get_id(int type, int i) {
+    int id = -1;
+    if (type == 1) {
+        // food
+        id = i;
+    } else if (type == 2) {
+        // niu-1
+        id = f + i;
+    } else if (type == 3) {
+        // niu-2
+        id = f + n + i;
+    } else if (type == 4) {
+        // drink
+        id = f + 2*n + i;
+    } else {
+        return -1;
+    }
+    return id;
+}
+
 int main() {
-  int n, m;
-  int a, b, w;
+  int fn, dn;
+  int fi, di;
   dinic_init();
-  scanf("%d %d", &n, &m);
+  scanf("%d %d %d", &n, &f, &d);
+  for (int i = 1; i <= f; i++) {
+      add_edge(0, i, 1, 0);
+  }
+  for (int i = 1; i <= d; i++) {
+      add_edge(get_id(4, i), f + 2*n + d + 1, 1, 0);
+  }
   for (int i = 1; i <= n; i++) {
-      scanf("%d %d", &a, &b);
-      add_edge(0, i, a, 0);
-      add_edge(i, n+1, b, 0);
+      int niu1 = get_id(2, i);
+      int niu2 = get_id(3, i);
+      add_edge(niu1, niu2, 1, 0);
+      scanf("%d %d", &fn, &dn);
+      while (fn --) {
+          scanf("%d", &fi);
+          add_edge(fi, niu1, 1, 0);
+      }
+      while (dn --) {
+          scanf("%d", &di);
+          add_edge(niu2, get_id(4, di), 1, 0);
+      }
   }
-  for (int i = 1; i <= m; i++) {
-      scanf("%d %d %d", &a, &b, &w);
-      add_edge(a, b, w, 0);
-      add_edge(b, a, w, 0);
-  }
-  int flow = dinic(0, n+1);
+  int flow = dinic(0, f + 2*n + d + 1);
   printf("%d\n", flow);
 
   return 0;
