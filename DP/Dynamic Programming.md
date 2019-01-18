@@ -34,7 +34,7 @@
 > > for (int i = 1; i <= N; i++) {
 > > 	for (int j = good[i].w; j <= M; j++) {
 > >     	if (good[i].w <= j) {
-> >         	opt[j] = min(opt[j], opt[j-good[i].w] + good[i].v);
+> >         	opt[j] = max(opt[j], opt[j-good[i].w] + good[i].v);
 > >         }
 > >     }
 > > }
